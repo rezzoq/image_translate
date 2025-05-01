@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" fx:controller="translate.image_translate.TranslateController"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnLoad" alignment="CENTER" mnemonicParsing="false" text="Load image" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="113.0" prefWidth="600.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="113.0" prefWidth="170.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="Source language" />
+                        <ChoiceBox fx:id="comboBoxPicLanguage" prefHeight="25.0" prefWidth="120.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="113.0" prefWidth="170.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="118.0" text="Target language" />
+                        <ChoiceBox fx:id="comboBoxResultLanguage" prefHeight="25.0" prefWidth="120.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnTranslate" disable="true" mnemonicParsing="false" text="Translate" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="298.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="previewLabel" layoutX="129.0" layoutY="192.0" text="Preview" />
+            <ImageView fx:id="imgOpen" fitHeight="231.0" fitWidth="200.0" layoutX="50.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
